@@ -5,7 +5,10 @@
   "main": "testing.js",
   "private": true,
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "capitalize": "babel-node --presets @babel/preset-env capitalize.js",
+    "reverseString": "babel-node --presets @babel/preset-env reverse-string.js",
+    "calculator": "babel-node --presets @babel/preset-env calculator.js"
   },
   "keywords": [],
   "author": "",

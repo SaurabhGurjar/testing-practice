@@ -11,7 +11,7 @@ function isVaild(a, b) {
         a + b > Number.MAX_SAFE_INTEGER ||
         a + b < Number.MIN_SAFE_INTEGER
     ) {
-        throw new RangeError("Inputs exceed the safe range (-9007199254740991 <= (a, b, a + b) <= 9007199254740991)!");
+        throw new RangeError("Inputs exceed the safe range (-9007199254740991 <= (a, b, a + b, a - b, a / b, a * b) <= 9007199254740991)!");
     }
     return true;
 }
@@ -24,3 +24,10 @@ export function subtract(a, b) {
     if(isVaild(a, b)) return a - b;
 } 
 
+export function divide(a, b) {
+    if(isVaild(a, b)) return a / b;
+}
+
+export function multiply(a, b) {
+    if(isVaild(a, b)) return a * b;
+}
